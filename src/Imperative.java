@@ -30,6 +30,18 @@ public class Imperative {
         return sum;
     }
 
+    public static Double sumLimitCardsMaleUsers(List<User> users) {
+        double sum = 0;
+
+        for (int i = 0; i < users.size(); i++) {
+            if (users.get(i).gender == Gender.MALE) {
+                sum += users.get(i).cardLimit;
+            }
+        }
+
+        return sum;
+    }
+
     public static void main(String[] args) {
 
         final List<User> users = Arrays.asList(
@@ -39,21 +51,8 @@ public class Imperative {
 
         final Double sumLimitAllCards = sumLimitCards(users);
         System.out.println(sumLimitAllCards);
+        final Double sumLimitCardsMaleUsers = sumLimitCardsMaleUsers(users);
+        System.out.println(sumLimitCardsMaleUsers);
 
     }
 }
-
-// public static Double sumLimitCardsMaleUsers(List<User> users) {
-// double sum = 0;
-
-// for (int i = 0; i < users.size(); i++) {
-// if (users.get(i).gender == Gender.MALE) {
-// sum += users.get(i).cardLimit;
-// }
-// }
-
-// return sum;
-// }
-
-// final Double sumLimitCardsMaleUsers = sumLimitCardsMaleUsers(users);
-// System.out.println(sumLimitAllCards);
