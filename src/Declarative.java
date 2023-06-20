@@ -17,6 +17,7 @@ class User {
         this.cardLimit = cardLimit;
     }
 
+    // (User user) -> user.gender == Gender.MALE
     public static boolean isFemale(User user) {
         return user.gender == Gender.FEMALE;
     }
